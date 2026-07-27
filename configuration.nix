@@ -85,7 +85,7 @@
   #services.displayManager.gdm.enable = true;  
   
   # Enable the GNOME Desktop Environment.
-  services.desktopManager.gnome.enable = true;
+  # services.desktopManager.gnome.enable = true;
 
   # Cosmic Desktop
   services.desktopManager.cosmic.enable = true;
@@ -216,16 +216,17 @@
     keychain
     neovim
     newsboat
-    nwg-look
     pamixer
     pavucontrol
     remmina
     seahorse
+    signal-desktop
     syncthing
     (texliveMedium.withPackages (ps: with ps; [ moderncv ]))
     trash-cli
     #veracrypt
     vim
+    virt-viewer
     vlc
     wget
     zsh
