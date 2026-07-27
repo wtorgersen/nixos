@@ -4,6 +4,8 @@
   inputs = {
     # NixOS official package source, here using the nixos-26.05 branch
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+
+    # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
