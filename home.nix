@@ -32,10 +32,16 @@ dconf.settings = {
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+  nixpkgs.config.allowUnfree = true;
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+    pkgs.alacritty
+    pkgs.brave
+    pkgs.eza
+    pkgs.joplin-desktop
+    pkgs.newsboat
+    pkgs.remmina
+    pkgs.signal-desktop
+    pkgs.vlc
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -107,6 +113,8 @@ dconf.settings = {
     
     initContent  = ''
     autoload -U colors && colors
+    export PATH="$HOME/.local/bin:$PATH"
+    export PATH="$HOME/Scripts:$PATH"
 
     PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
     '';
@@ -116,11 +124,6 @@ dconf.settings = {
       GIT_EDITOR = "nvim";
       MANPAGER = "nvim +Man!";
     };
-
-    initExtra = ''
-    export PATH="$HOME/.local/bin:$PATH"
-    export PATH="$HOME/Scripts:$PATH"
-  '';
 
     shellAliases = {
       ls = "eza --icons --group-directories-first";

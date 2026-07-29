@@ -15,11 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelModules = [ "i2c-dev" ];
   
-  # Nvidia
-  # hardware.graphics.enable = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];
-  # hardware.nvidia.open = false;
-
+  # Garbage collector  
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older.than 3d";
@@ -203,31 +199,23 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    alacritty
     blueman
     distrobox
     dnsmasq
-    eza
     firefox
     git
     gnome-disk-utility
     htop
-    joplin-desktop
-    keychain
-    neovim
-    newsboat
+    #keychain
     pamixer
     pavucontrol
-    remmina
     seahorse
-    signal-desktop
     syncthing
     (texliveMedium.withPackages (ps: with ps; [ moderncv ]))
     trash-cli
     #veracrypt
     vim
     virt-viewer
-    vlc
     wget
     zsh
   ];
