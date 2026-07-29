@@ -227,6 +227,11 @@
     #ALT_TERMINAL = "alacritty";
   };
 
+  environment.sessionVariables.XDG_DATA_DIRS = [
+    "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
+    "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
