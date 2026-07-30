@@ -123,6 +123,8 @@ dconf.settings = {
     export PATH="$HOME/.local/bin:$PATH"
     export PATH="$HOME/Scripts:$PATH"
 
+    bindkey '^R' history-incremental-search-backward
+
     PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
     '';
 
