@@ -138,11 +138,11 @@
 
   services = {
     # Configure keymap in X11
-    xserver = {
-      enable = true;
-      xkb.layout = "no";
-      xkb.variant = "";
-    };
+    #xserver = {
+    #  enable = true;
+    #  xkb.layout = "no";
+    #  xkb.variant = "";
+    #};
     pipewire = {
       enable = true;
       alsa.enable = true;
