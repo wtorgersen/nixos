@@ -36,7 +36,7 @@
       ];
     };
   };
-
+  
   # Virtualization
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
@@ -200,7 +200,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     blueman
+    cifs-utils
     distrobox
+    dnsutils
     dnsmasq
     firefox
     git
