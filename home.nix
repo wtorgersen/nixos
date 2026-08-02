@@ -39,6 +39,7 @@ dconf.settings = {
     pkgs.brave
     pkgs.eza
     pkgs.joplin-desktop
+    pkgs.libreoffice-fresh
     pkgs.newsboat
     pkgs.remmina
     pkgs.signal-desktop
