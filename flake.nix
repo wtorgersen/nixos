@@ -3,10 +3,19 @@
 
   inputs = {
     # NixOS official package source, here using the nixos-26.05 branch
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    ## Stable
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    
+    ## Unstable
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Home Manager
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    ## Stable
+    # home-manager.url = "github:nix-community/home-manager/release-26.05";
+    
+    ## Unstable
+    home-manager.url = "github:nix-community/home-manager/master";
+    
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
   };
