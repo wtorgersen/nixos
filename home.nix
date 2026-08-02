@@ -37,6 +37,7 @@ dconf.settings = {
   home.packages = [
     pkgs.alacritty
     pkgs.brave
+    pkgs.cosmic-ext-calculator
     pkgs.eza
     pkgs.joplin-desktop
     pkgs.libreoffice-fresh
