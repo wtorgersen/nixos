@@ -220,6 +220,10 @@
     virt-viewer
     wget
     zsh
+    # Emacs deps
+    ripgrep
+    fd
+    libvterm
   ];
 
   environment.sessionVariables = rec {

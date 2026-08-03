@@ -38,6 +38,7 @@ dconf.settings = {
     pkgs.alacritty
     pkgs.brave
     pkgs.cosmic-ext-calculator
+    pkgs.emacs30-pgtk
     pkgs.eza
     pkgs.joplin-desktop
     pkgs.libreoffice-fresh
@@ -70,6 +71,9 @@ dconf.settings = {
       allowUnfreePredicate = pkg: true;
     }
     '';
+
+    ".config/doom".source = ./config/doom;
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
