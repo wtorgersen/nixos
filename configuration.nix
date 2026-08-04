@@ -37,6 +37,21 @@
     };
   };
   
+  # Printing
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
+  };
+
   # Virtualization
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
@@ -207,6 +222,7 @@
     firefox
     git
     gnome-disk-utility
+    hplip
     htop
     #keychain
     pamixer
