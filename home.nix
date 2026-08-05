@@ -25,11 +25,13 @@
     gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
 
-dconf.settings = {
-  "org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
+  dconf.enable = true;
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "Adwaita-dark";
+      color-scheme = "prefer-dark";
+    };
   };
-};
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
