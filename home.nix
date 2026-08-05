@@ -18,7 +18,7 @@
   gtk = {
   enable = true;
     theme = {
-      name = "Adwaita-dark";
+      name = "Adwaita";
       package = pkgs.gnome-themes-extra;
     };
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
@@ -28,7 +28,8 @@
   dconf.enable = true;
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      gtk-theme = "Adwaita-dark";
+      #gtk-theme = "Adwaita-dark";
+      gtk-theme = "Adwaita";
       color-scheme = "prefer-dark";
     };
   };
