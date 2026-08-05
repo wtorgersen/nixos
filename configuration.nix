@@ -130,8 +130,6 @@
       localNetworkGameTransfers.openFirewall = true;
     };
 
-    programs.dconf.enable = true;
-  
     # nm-applet.enable = true;
 
     # Appimage
