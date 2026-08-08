@@ -73,6 +73,17 @@
           ];
         };
 
+        prx-test1 = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          modules = [
+            ./modules/common.nix
+            ./modules/server.nix
+            ./hosts/prx-test1/configuration.nix
+            ./hosts/prx-test1/hardware-configuration.nix
+          ];
+        };
+
         # Uncomment when the Docker host exists.
         #
         # docker1 = nixpkgs.lib.nixosSystem {
@@ -108,3 +119,4 @@
       };
     };
 }
+
