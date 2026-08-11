@@ -7,7 +7,7 @@
 #
 # Machine-specific configuration belongs in the respective host/module.
 
-{ config, pkgs, ... }:
+{ config, pkgs, stablePkgs, ... }:
 
 {
   services.libinput.enable = true;

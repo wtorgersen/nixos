@@ -36,6 +36,9 @@
       nixosConfigurations = {
         laptop = nixpkgs-unstable.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit stablePkgs;
+          };
 
           modules = [
             ./modules/common.nix
@@ -51,6 +54,9 @@
         #
         # workstation = nixpkgs-unstable.lib.nixosSystem {
         #   inherit system;
+        #   specialArgs = {
+        #     inherit stablePkgs;
+        #   };
         #
         #   modules = [
         #     ./modules/common.nix
@@ -102,6 +108,10 @@
         "unstable" =
           home-manager-unstable.lib.homeManagerConfiguration {
             pkgs = unstablePkgs;
+
+            extraSpecialArgs = {
+              inherit stablePkgs;
+            };
 
             modules = [
               ./home.nix

@@ -1,4 +1,4 @@
-{ config, lib,  pkgs, ... }:
+{ config, lib,  pkgs, stablePkgs,... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -43,7 +43,7 @@
     pkgs.cosmic-ext-calculator
     pkgs.emacs30-pgtk
     pkgs.eza
-    pkgs.joplin-desktop
+    stablePkgs.joplin-desktop
     pkgs.libreoffice-fresh
     pkgs.loupe
     pkgs.newsboat
