@@ -1,5 +1,7 @@
 " NeoVim Config
 
+require("config.lazy")
+
 filetype plugin on
 syntax on
 
