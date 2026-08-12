@@ -43,6 +43,8 @@
     pkgs.cosmic-ext-calculator
     pkgs.emacs30-pgtk
     pkgs.eza
+    pkgs.gcc
+    pkgs.gnumake
     stablePkgs.joplin-desktop
     pkgs.libreoffice-fresh
     pkgs.loupe
@@ -76,6 +78,11 @@
     '';
 
     ".config/doom".source = ./config/doom;
+    
+    ".config/nvim" = {
+      source = ./config/nvim;
+      recursive = true;
+    };
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -154,7 +161,7 @@
 
   programs.neovim = {
     enable = true;
-    extraConfig = lib.fileContents ./config/nvim/init.vim;
+    initLua = lib.fileContents ./config/nvim/init.lua;
   };
 
 }
