@@ -1,5 +1,4 @@
 -- NeoVim config
-
 -- LazyVim plugin manager
 require("config.lazy")
 
@@ -19,7 +18,7 @@ vim.opt.softtabstop = 2
 vim.g.mapleader = " "
 
 -- Keybinds
---
+vim.keymap.set('n','<leader>pv', vim.cmd.Ex)
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -29,3 +28,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- Transparent background
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+
+-- Imports
+require("config.undo")
+
