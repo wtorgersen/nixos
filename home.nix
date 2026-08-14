@@ -51,7 +51,13 @@
     pkgs.newsboat
     pkgs.remmina
     pkgs.signal-desktop
+    pkgs.gnutar
     pkgs.vlc
+
+    # Language servers for use with neovim
+    pkgs.pyright
+    pkgs.lua-language-server
+    pkgs.tree-sitter
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
