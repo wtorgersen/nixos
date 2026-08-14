@@ -43,8 +43,6 @@
     pkgs.cosmic-ext-calculator
     pkgs.emacs30-pgtk
     pkgs.eza
-    pkgs.gcc
-    pkgs.gnumake
     stablePkgs.joplin-desktop
     pkgs.libreoffice-fresh
     pkgs.loupe
@@ -53,6 +51,11 @@
     pkgs.signal-desktop
     pkgs.gnutar
     pkgs.vlc
+
+    # Programming
+    pkgs.gcc
+    pkgs.gnumake
+    pkgs.python3
 
     # Language servers for use with neovim
     pkgs.pyright
