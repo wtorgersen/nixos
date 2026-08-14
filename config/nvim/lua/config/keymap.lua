@@ -35,6 +35,16 @@ vim.keymap.set("n", "<leader>bwq", buffers.save_and_close, {
   desc = "Save and close buffer",
 })
 
+-- Formatting
+vim.keymap.set("n", "<leader>fm", function()
+  require("conform").format({
+    async = true,
+    lsp_format = "fallback",
+  })
+end, {
+  desc = "Format file",
+})
+
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
