@@ -41,7 +41,6 @@
     pkgs.alacritty
     pkgs.brave
     pkgs.cosmic-ext-calculator
-    pkgs.emacs30-pgtk
     pkgs.eza
     stablePkgs.joplin-desktop
     pkgs.libreoffice-fresh
@@ -90,8 +89,6 @@
       allowUnfreePredicate = pkg: true;
     }
     '';
-
-    ".config/doom".source = ./config/doom;
     
     ".config/nvim" = {
       source = ./config/nvim;
