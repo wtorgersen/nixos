@@ -36,6 +36,8 @@ vim.keymap.set("n", "<leader>bwq", buffers.save_and_close, {
   desc = "Save and close buffer",
 })
 
+vim.keymap.set('n', '<leader>st', '<cmd>Neotree toggle<CR>')
+
 -- Formatting
 vim.keymap.set("n", "<leader>fm", function()
   require("conform").format({
