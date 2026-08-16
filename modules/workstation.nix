@@ -8,7 +8,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = [ "i2c-dev" ];
+  boot.kernelModules = [
+    "i2c-dev"
+    "i2c-piix4"
+  ];
   
   # Networking
   networking.hostName = "nixos-st"; 
@@ -24,7 +27,12 @@
   services.desktopManager.cosmic.enable = true;
 
   # OpenRGB
-  services.hardware.openrgb.enable = true;
+  services.hardware.openrgb = {
+    enable = true;
+    package = pkgs.openrgb-with-all-plugins;
+    motherboard = "amd";
+  };
+
   ## i2c
   hardware.i2c.enable = true;
   users.groups.i2c.members = ["william"];
