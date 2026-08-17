@@ -43,9 +43,9 @@
           modules = [
             ./modules/common.nix
             ./modules/desktop.nix
-            ./modules/laptop.nix
             ./modules/gaming.nix
             ./modules/virtualization.nix
+            ./hosts/laptop/configuration.nix
             ./hosts/laptop/hardware-configuration.nix
           ];
         };
@@ -61,10 +61,10 @@
         #   modules = [
         #     ./modules/common.nix
         #     ./modules/desktop.nix
-        #     ./modules/workstation.nix
         #     ./modules/gaming.nix
         #     ./modules/virtualization.nix
-        #     ./hosts/workstation/hardware-configuration.nix
+        #     ./hosts/mainpc/configuration.nix
+        #     ./hosts/mainpc/hardware-configuration.nix
         #   ];
         # };
 
