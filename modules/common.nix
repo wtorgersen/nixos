@@ -93,6 +93,7 @@
   users.users.william = {
     isNormalUser = true;
     description = "William";
+    uid = 1000;
     extraGroups = [
       "wheel"
     ];
