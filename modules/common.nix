@@ -92,6 +92,7 @@
   #
   users.users.william = {
     isNormalUser = true;
+    group = "william";
     description = "William";
     uid = 1000;
     extraGroups = [
@@ -99,6 +100,7 @@
     ];
   };
 
+  users.groups.william = {};
 
   # ------------------------------------------------------------
   # Miscellaneous
