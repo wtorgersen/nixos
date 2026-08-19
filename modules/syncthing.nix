@@ -45,10 +45,10 @@ in
       # Remote Syncthing devices
       devices = {
         syncthing02 = {
-          id = "put-id-here";
+          id = "SR7VPTD-HL7FOYX-GBNYFPF-HPWWHAE-AGDBII2-IKTIMSK-YLLLYYR-VIJ5NA3";
           addresses = [
-            "tcp4://replace-with-dns-name:22000"
-            "tcp4://replace-with-ip:22000"
+            "tcp4://10.0.12.15:22000"
+            "tcp4://syncthing02.lv.lan:22000"
           ];
         };
       };
