@@ -52,21 +52,22 @@
 
         # Uncomment when the workstation exists.
         #
-        # workstation = nixpkgs-unstable.lib.nixosSystem {
-        #   inherit system;
-        #   specialArgs = {
-        #     inherit stablePkgs;
-        #   };
-        #
-        #   modules = [
-        #     ./modules/common.nix
-        #     ./modules/desktop.nix
-        #     ./modules/gaming.nix
-        #     ./modules/virtualization.nix
-        #     ./hosts/mainpc/configuration.nix
-        #     ./hosts/mainpc/hardware-configuration.nix
-        #   ];
-        # };
+        mainpc = nixpkgs-unstable.lib.nixosSystem {
+         inherit system;
+           specialArgs = {
+             inherit stablePkgs;
+           };
+        
+           modules = [
+             ./modules/common.nix
+             ./modules/desktop.nix
+             ./modules/gaming.nix
+             ./modules/syncthing.nix
+             ./modules/virtualization.nix
+             ./hosts/mainpc/configuration.nix
+             ./hosts/mainpc/hardware-configuration.nix
+           ];
+         };
 
         testing = nixpkgs.lib.nixosSystem {
           inherit system;
