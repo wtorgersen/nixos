@@ -95,6 +95,7 @@
     gnome-disk-utility
     hplip
     pamixer
+    pciutils
     pavucontrol
     seahorse
     syncthing
