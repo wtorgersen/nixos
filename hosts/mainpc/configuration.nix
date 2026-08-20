@@ -44,6 +44,10 @@
   ## i2c
   hardware.i2c.enable = true;
   users.groups.i2c.members = ["william"];
-  
+
+  environment.systemPackages = with pkgs; [
+    handbrake
+  ];
+
   system.stateVersion = "26.05"; # Did you read the comment?
 }
