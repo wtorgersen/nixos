@@ -14,6 +14,8 @@
   hardware.enableRedistributableFirmware = true;
 
   # Graphics
+  services.xserver.videoDrivers = [ "nvidia" ]; # Not sure if this is needed
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
