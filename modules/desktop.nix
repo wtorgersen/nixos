@@ -91,6 +91,7 @@
     dnsutils
     dnsmasq
     firefox
+    gimp
     gnome-disk-utility
     hplip
     pamixer
