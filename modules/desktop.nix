@@ -1,9 +1,8 @@
-# Common configuration shared by all NixOS systems.
+# Common configuration shared by all NixOS desktop systems.
 #
 # This module should contain settings that make sense on:
 #   - laptops
 #   - workstations
-#   - servers / VMs
 #
 # Machine-specific configuration belongs in the respective host/module.
 
@@ -95,7 +94,6 @@
     gnome-disk-utility
     hplip
     pamixer
-    pciutils
     pavucontrol
     seahorse
     syncthing
@@ -114,10 +112,6 @@
   # ------------------------------------------------------------
   # Networking
   # ------------------------------------------------------------
-
-  # Use NetworkManager on machines that need normal desktop-style
-  # networking. Consider moving this to a desktop module if your
-  # servers/VMs don't use NetworkManager.
   #
   services.gvfs.enable = true;
   
