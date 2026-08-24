@@ -33,6 +33,7 @@
     pkgs.cosmic-ext-calculator
     pkgs.eza
     stablePkgs.joplin-desktop
+    stablePkgs.keepassxc
     pkgs.libreoffice-fresh
     pkgs.loupe
     pkgs.newsboat
