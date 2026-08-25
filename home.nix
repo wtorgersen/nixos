@@ -34,7 +34,7 @@
     pkgs.eza
     stablePkgs.joplin-desktop
     stablePkgs.keepassxc
-    pkgs.libreoffice-fresh
+    stablePkgs.libreoffice-fresh
     pkgs.loupe
     pkgs.newsboat
     pkgs.remmina
