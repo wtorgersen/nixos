@@ -93,7 +93,6 @@
     firefox
     gimp
     gnome-disk-utility
-    hplip
     pamixer
     pavucontrol
     seahorse
