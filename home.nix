@@ -31,6 +31,7 @@
     pkgs.alacritty
     pkgs.brave
     pkgs.cosmic-ext-calculator
+    pkgs.cosmic-viewer
     pkgs.eza
     pkgs.joplin-desktop
     stablePkgs.keepassxc
