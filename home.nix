@@ -32,7 +32,7 @@
     pkgs.brave
     pkgs.cosmic-ext-calculator
     pkgs.eza
-    stablePkgs.joplin-desktop
+    pkgs.joplin-desktop
     stablePkgs.keepassxc
     stablePkgs.libreoffice-fresh
     pkgs.loupe
