@@ -85,9 +85,16 @@
     pkgs.noto-fonts
   ];
 
+  # Virus scanning
+  services.clamav = {
+    # daemon.enable = true;
+    updater.enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     blueman
     cifs-utils
+    clamav
     distrobox
     dnsutils
     dnsmasq
