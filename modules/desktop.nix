@@ -148,7 +148,10 @@
   services.openssh = {
     enable = true;
     settings = {
-      #PasswordAuthentication = false;
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "william" ];
     };
   };
 
@@ -168,6 +171,10 @@
   users.users.william = {
     extraGroups = [ "networkmanager" "libvirtd" ];
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL7fXELxxUaM8OiLhtmlYqT4y7McAMk2SZ2o3jlTDcFd"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAMPF013m7oLC+8O/rNLQv1sHqlX3V896m5YRWH9/tX+"
+    ];
   };
 
   # ------------------------------------------------------------
