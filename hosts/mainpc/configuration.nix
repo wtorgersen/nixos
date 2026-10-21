@@ -49,7 +49,7 @@
   users.groups.i2c.members = ["william"];
 
   environment.systemPackages = with pkgs; [
-    handbrake
+    #handbrake
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
