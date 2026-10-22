@@ -51,6 +51,9 @@
   };
 
    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    discover
+    dolphin
+    dolphin-plugins
     elisa
     gwenview
     kate
@@ -61,6 +64,8 @@
     okular
     plasma-browser-integration
   ];
+
+  programs.kde-pim.enable = false;
 
   # OpenRGB
   services.hardware.openrgb = {
