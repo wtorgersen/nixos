@@ -29,13 +29,38 @@
   };
   
   # Networking
-  networking.hostName = "nixos-st"; 
+  networking.hostName = "nixos-st";
+
+  # Keyring / Wallet
+  services.gnome.gnome-keyring.enable = true;
 
   # Login / Display manager
-  services.displayManager.cosmic-greeter.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
+  
+  services.displayManager.plasma-login-manager.enable = true;
 
   # Cosmic Desktop
   services.desktopManager.cosmic.enable = true;
+
+  # KDE Plasma
+  services.desktopManager.plasma6.enable = true;
+
+  qt = {
+  enable = true;
+  platformTheme = "kde";
+  };
+
+   environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    elisa
+    gwenview
+    kate
+    konsole
+    khelpcenter
+    ktexteditor
+    krdp
+    okular
+    plasma-browser-integration
+  ];
 
   # OpenRGB
   services.hardware.openrgb = {
