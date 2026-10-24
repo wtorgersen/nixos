@@ -27,4 +27,8 @@
       remotePlay.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
     };
+
+    services.udev.packages = with pkgs; [ 
+      game-devices-udev-rules 
+    ];
 }
