@@ -52,8 +52,8 @@
 
    environment.plasma6.excludePackages = with pkgs.kdePackages; [
     discover
-    dolphin
-    dolphin-plugins
+    # dolphin
+    # dolphin-plugins
     elisa
     gwenview
     kate
