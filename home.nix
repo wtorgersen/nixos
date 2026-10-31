@@ -41,6 +41,7 @@
     pkgs.remmina
     pkgs.signal-desktop
     pkgs.gnutar
+    pkgs.vivaldi
     pkgs.vlc
 
     # Programming
